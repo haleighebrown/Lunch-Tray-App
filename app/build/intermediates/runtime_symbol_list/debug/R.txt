@@ -2615,6 +2615,7 @@ int id accessibility_custom_action_6 0x7f08002c
 int id accessibility_custom_action_7 0x7f08002d
 int id accessibility_custom_action_8 0x7f08002e
 int id accessibility_custom_action_9 0x7f08002f
+int id accompanimentMenuFragment 0x7f080230
 int id accompaniment_options 0x7f080030
 int id accompaniment_price 0x7f080031
 int id accompaniment_selection 0x7f080032
@@ -2622,6 +2623,8 @@ int id action0 0x7f080033
 int id actionDown 0x7f080034
 int id actionDownUp 0x7f080035
 int id actionUp 0x7f080036
+int id action_accompanimentMenuFragment_to_checkoutFragment 0x7f080231
+int id action_accompanimentMenuFragment_to_startOrderFragment 0x7f080232
 int id action_bar 0x7f080037
 int id action_bar_activity_content 0x7f080038
 int id action_bar_container 0x7f080039
@@ -2629,15 +2632,21 @@ int id action_bar_root 0x7f08003a
 int id action_bar_spinner 0x7f08003b
 int id action_bar_subtitle 0x7f08003c
 int id action_bar_title 0x7f08003d
+int id action_checkoutFragment_to_startOrderFragment 0x7f080233
 int id action_container 0x7f08003e
 int id action_context_bar 0x7f08003f
 int id action_divider 0x7f080040
+int id action_entreeMenuFragment_to_sideMenuFragment 0x7f080234
+int id action_entreeMenuFragment_to_startOrderFragment 0x7f080235
 int id action_image 0x7f080041
 int id action_menu_divider 0x7f080042
 int id action_menu_presenter 0x7f080043
 int id action_mode_bar 0x7f080044
 int id action_mode_bar_stub 0x7f080045
 int id action_mode_close_button 0x7f080046
+int id action_sideMenuFragment_to_accompanimentMenuFragment 0x7f080236
+int id action_sideMenuFragment_to_startOrderFragment 0x7f080237
+int id action_startOrderFragment_to_entreeMenuFragment 0x7f080238
 int id action_text 0x7f080047
 int id actions 0x7f080048
 int id activity_chooser_view_content 0x7f080049
@@ -2695,6 +2704,7 @@ int id chain2 0x7f08007c
 int id chains 0x7f08007d
 int id checkbox 0x7f08007e
 int id checked 0x7f08007f
+int id checkoutFragment 0x7f080239
 int id chili 0x7f080080
 int id chili_description 0x7f080081
 int id chili_price 0x7f080082
@@ -2772,6 +2782,7 @@ int id endToStart 0x7f0800c9
 int id end_padder 0x7f0800ca
 int id enterAlways 0x7f0800cb
 int id enterAlwaysCollapsed 0x7f0800cc
+int id entreeMenuFragment 0x7f08023a
 int id entree_options 0x7f0800cd
 int id entree_price 0x7f0800ce
 int id entree_selection 0x7f0800cf
@@ -2905,6 +2916,7 @@ int id mtrl_picker_title_text 0x7f08014e
 int id mtrl_view_tag_bottom_padding 0x7f08014f
 int id multiply 0x7f080150
 int id nav_controller_view_tag 0x7f080151
+int id nav_host_fragment 0x7f08023d
 int id nav_host_fragment_container 0x7f080152
 int id navigation_bar_item_active_indicator_view 0x7f080153
 int id navigation_bar_item_icon_container 0x7f080154
@@ -3005,6 +3017,7 @@ int id shortcut 0x7f0801b2
 int id showCustom 0x7f0801b3
 int id showHome 0x7f0801b4
 int id showTitle 0x7f0801b5
+int id sideMenuFragment 0x7f08023b
 int id side_options 0x7f0801b6
 int id side_price 0x7f0801b7
 int id side_selection 0x7f0801b8
@@ -3039,6 +3052,7 @@ int id src_over 0x7f0801d4
 int id standard 0x7f0801d5
 int id start 0x7f0801d6
 int id startHorizontal 0x7f0801d7
+int id startOrderFragment 0x7f08023c
 int id startToEnd 0x7f0801d8
 int id startVertical 0x7f0801d9
 int id start_order_btn 0x7f0801da
@@ -3464,12 +3478,12 @@ int string submit 0x7f100081
 int string submit_order 0x7f100082
 int string subtotal 0x7f100083
 int string tax 0x7f100084
-int string tile_start_order 0x7f100085
 int string title_accompaniment_menu 0x7f100086
 int string title_checkout 0x7f100087
 int string title_coupons 0x7f100088
 int string title_entree_menu 0x7f100089
 int string title_side_menu 0x7f10008a
+int string title_start_order 0x7f10008c
 int string total 0x7f10008b
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001

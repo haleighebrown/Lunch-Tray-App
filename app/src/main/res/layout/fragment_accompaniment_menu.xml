@@ -55,7 +55,7 @@
 
                 <RadioButton
                     android:id="@+id/bread"
-                    android:onClick='@{() -> viewModel.setAccompaniment(@string/bread)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("bread")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -83,7 +83,7 @@
 
                 <RadioButton
                     android:id="@+id/berries"
-                    android:onClick='@{() -> viewModel.setAccompaniment(@string/berries)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("berries")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -113,7 +113,7 @@
 
                 <RadioButton
                     android:id="@+id/pickles"
-                    android:onClick='@{() -> viewModel.setAccompaniment(@string/pickles)}'
+                    android:onClick='@{() -> viewModel.setAccompaniment("pickles")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -147,7 +147,7 @@
 
             <TextView
                 android:id="@+id/subtotal"
-                android:onClick='@{@string/viewModel.subtotal}'
+                android:text='@{@string/subtotal(viewModel.subtotal)}'
                 style="@style/Widget.LunchTray.TextView.Subtotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"

@@ -53,7 +53,7 @@
 
                 <RadioButton
                     android:id="@+id/cauliflower"
-                    android:onClick = "@{() -> viewModel.setEntree(@string/cauliflower)}"
+                    android:onClick = '@{() -> viewModel.setEntree("cauliflower")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -83,7 +83,7 @@
 
                 <RadioButton
                     android:id="@+id/chili"
-                    android:onClick = "@{() -> viewModel.setEntree(@string/chili)}"
+                    android:onClick = '@{() -> viewModel.setEntree("chili")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -113,7 +113,7 @@
 
                 <RadioButton
                     android:id="@+id/pasta"
-                    android:onClick = "@{() -> viewModel.setEntree(@string/pasta)}"
+                    android:onClick = '@{() -> viewModel.setEntree("pasta")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -143,7 +143,7 @@
 
                 <RadioButton
                     android:id="@+id/skillet"
-                    android:onClick = "@{() -> viewModel.setEntree(@string/skillet)}"
+                    android:onClick = '@{() -> viewModel.setEntree("skillet")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -180,7 +180,7 @@
                 style="@style/Widget.LunchTray.TextView.Subtotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
-                android:text='@{@string/viewModel.subtotal}'
+                android:text='@{@string/subtotal(viewModel.subtotal)}'
                 tools:text="Subtotal $5.00"/>
 
             <Button

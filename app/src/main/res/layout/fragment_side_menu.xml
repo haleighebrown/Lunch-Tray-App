@@ -53,7 +53,7 @@
 
                 <RadioButton
                     android:id="@+id/salad"
-                    android:onClick = "@{() -> viewModel.setSide(@string/salad)}"
+                    android:onClick = '@{() -> viewModel.setSide("salad")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -83,7 +83,7 @@
 
                 <RadioButton
                     android:id="@+id/soup"
-                    android:onClick = "@{() -> viewModel.setSide(@string/soup)}"
+                    android:onClick = '@{() -> viewModel.setSide("soup")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -114,7 +114,7 @@
 
                 <RadioButton
                     android:id="@+id/potatoes"
-                    android:onClick = "@{() -> viewModel.setSide(@string/potatoes)}"
+                    android:onClick = '@{() -> viewModel.setSide("potatoes")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -144,7 +144,7 @@
 
                 <RadioButton
                     android:id="@+id/rice"
-                    android:onClick = "@{() -> viewModel.setSide(@string/rice)}"
+                    android:onClick = '@{() -> viewModel.setSide("rice")}'
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceBody1"
@@ -178,7 +178,7 @@
 
             <TextView
                 android:id="@+id/subtotal"
-                android:text = "@{@string/viewModels.subtotal}"
+                android:text = '@{@string/subtotal(viewModel.subtotal)}'
                 style="@style/Widget.LunchTray.TextView.Subtotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"

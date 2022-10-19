@@ -71,10 +71,10 @@ class OrderViewModel : ViewModel() {
      * Set the entree for the order.
      */
     fun setEntree(entree: String) {
-        if (_entree != null) {
+        if (_entree.value != null) {
             previousEntreePrice = (_entree.value)!!.price
         }
-        if (_subtotal != null) {
+        if (_subtotal.value != null) {
             _subtotal.value = _subtotal.value?.minus(previousEntreePrice)
         }
         _entree.value = menuItems[entree]
@@ -125,7 +125,7 @@ class OrderViewModel : ViewModel() {
      */
     fun calculateTaxAndTotal() {
         _tax.value = _subtotal.value!!*taxRate
-        _total.value = _subtotal.value!! + _tax.value!!
+        _total.value = _subtotal.value!!+_tax.value!!
     }
 
     /**
@@ -138,8 +138,8 @@ class OrderViewModel : ViewModel() {
         _entree.value = null
         _side.value = null
         _accompaniment.value = null
-        _subtotal.value = null
-        _total.value = null
-        _tax.value = null
+        _subtotal.value = 0.0
+        _total.value = 0.0
+        _tax.value = 0.0
     }
 }

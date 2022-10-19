@@ -15,7 +15,7 @@
   -->
 <resources>
     <string name="app_name">Lunch Tray</string>
-    <string name="tile_start_order">Order</string>
+    <string name="title_start_order">Order</string>
     <string name="title_coupons">Coupons</string>
     <string name="title_entree_menu">Entrees</string>
     <string name="title_side_menu">Sides</string>
