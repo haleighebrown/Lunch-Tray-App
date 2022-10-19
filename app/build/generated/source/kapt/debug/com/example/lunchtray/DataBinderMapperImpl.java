@@ -116,16 +116,15 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(7);
+    static final SparseArray<String> sKeys = new SparseArray<String>(6);
 
     static {
       sKeys.put(1, "AccompanimentMenuFragment");
       sKeys.put(2, "CheckoutFragment");
       sKeys.put(3, "EntreeMenuFragment");
-      sKeys.put(4, "OrderviewModel");
-      sKeys.put(5, "SideMenuFragment");
+      sKeys.put(4, "SideMenuFragment");
       sKeys.put(0, "_all");
-      sKeys.put(6, "viewModel");
+      sKeys.put(5, "viewModel");
     }
   }
 

@@ -58,7 +58,7 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
   public final TextView total;
 
   @Bindable
-  protected OrderViewModel mOrderviewModel;
+  protected OrderViewModel mViewModel;
 
   @Bindable
   protected CheckoutFragment mCheckoutFragment;
@@ -84,11 +84,11 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
     this.total = total;
   }
 
-  public abstract void setOrderviewModel(@Nullable OrderViewModel OrderviewModel);
+  public abstract void setViewModel(@Nullable OrderViewModel viewModel);
 
   @Nullable
-  public OrderViewModel getOrderviewModel() {
-    return mOrderviewModel;
+  public OrderViewModel getViewModel() {
+    return mViewModel;
   }
 
   public abstract void setCheckoutFragment(@Nullable CheckoutFragment CheckoutFragment);

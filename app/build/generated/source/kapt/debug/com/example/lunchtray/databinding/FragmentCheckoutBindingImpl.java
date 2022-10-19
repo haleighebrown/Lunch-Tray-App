@@ -92,8 +92,8 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         if (BR.CheckoutFragment == variableId) {
             setCheckoutFragment((com.example.lunchtray.ui.order.CheckoutFragment) variable);
         }
-        else if (BR.OrderviewModel == variableId) {
-            setOrderviewModel((com.example.lunchtray.model.OrderViewModel) variable);
+        else if (BR.viewModel == variableId) {
+            setViewModel((com.example.lunchtray.model.OrderViewModel) variable);
         }
         else {
             variableSet = false;
@@ -109,12 +109,12 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         notifyPropertyChanged(BR.CheckoutFragment);
         super.requestRebind();
     }
-    public void setOrderviewModel(@Nullable com.example.lunchtray.model.OrderViewModel OrderviewModel) {
-        this.mOrderviewModel = OrderviewModel;
+    public void setViewModel(@Nullable com.example.lunchtray.model.OrderViewModel ViewModel) {
+        this.mViewModel = ViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x80L;
         }
-        notifyPropertyChanged(BR.OrderviewModel);
+        notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
     }
 
@@ -122,21 +122,21 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeOrderviewModelEntree((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
+                return onChangeViewModelAccompaniment((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
             case 1 :
-                return onChangeOrderviewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
             case 2 :
-                return onChangeOrderviewModelTax((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelEntree((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
             case 3 :
-                return onChangeOrderviewModelTotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+                return onChangeViewModelTotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
             case 4 :
-                return onChangeOrderviewModelSide((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
+                return onChangeViewModelSide((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
             case 5 :
-                return onChangeOrderviewModelAccompaniment((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
+                return onChangeViewModelTax((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeOrderviewModelEntree(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> OrderviewModelEntree, int fieldId) {
+    private boolean onChangeViewModelAccompaniment(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> ViewModelAccompaniment, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -145,7 +145,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeOrderviewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> OrderviewModelSubtotal, int fieldId) {
+    private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -154,7 +154,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeOrderviewModelTax(androidx.lifecycle.LiveData<java.lang.String> OrderviewModelTax, int fieldId) {
+    private boolean onChangeViewModelEntree(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> ViewModelEntree, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -163,7 +163,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeOrderviewModelTotal(androidx.lifecycle.LiveData<java.lang.String> OrderviewModelTotal, int fieldId) {
+    private boolean onChangeViewModelTotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelTotal, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
@@ -172,7 +172,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeOrderviewModelSide(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> OrderviewModelSide, int fieldId) {
+    private boolean onChangeViewModelSide(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> ViewModelSide, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
@@ -181,7 +181,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         }
         return false;
     }
-    private boolean onChangeOrderviewModelAccompaniment(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> OrderviewModelAccompaniment, int fieldId) {
+    private boolean onChangeViewModelTax(androidx.lifecycle.LiveData<java.lang.String> ViewModelTax, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
@@ -198,160 +198,160 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.example.lunchtray.model.MenuItem orderviewModelEntreeGetValue = null;
-        java.lang.String orderviewModelEntreeName = null;
-        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> orderviewModelEntree = null;
+        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelAccompaniment = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
         com.example.lunchtray.ui.order.CheckoutFragment checkoutFragment = mCheckoutFragment;
-        java.lang.String taxAndroidStringTaxOrderviewModelTax = null;
-        com.example.lunchtray.model.OrderViewModel orderviewModel = mOrderviewModel;
-        java.lang.String totalAndroidStringTotalOrderviewModelTotal = null;
-        java.lang.String orderviewModelSubtotalGetValue = null;
-        java.lang.String orderviewModelSideName = null;
-        java.lang.String orderviewModelTaxGetValue = null;
-        java.lang.String orderviewModelTotalGetValue = null;
-        java.lang.String orderviewModelEntreeFormattedPrice = null;
-        java.lang.String orderviewModelAccompanimentFormattedPrice = null;
-        java.lang.String subtotalAndroidStringSubtotalOrderviewModelSubtotal = null;
-        java.lang.String orderviewModelSideFormattedPrice = null;
-        androidx.lifecycle.LiveData<java.lang.String> orderviewModelSubtotal = null;
-        java.lang.String orderviewModelAccompanimentName = null;
-        com.example.lunchtray.model.MenuItem orderviewModelSideGetValue = null;
-        androidx.lifecycle.LiveData<java.lang.String> orderviewModelTax = null;
-        androidx.lifecycle.LiveData<java.lang.String> orderviewModelTotal = null;
-        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> orderviewModelSide = null;
-        com.example.lunchtray.model.MenuItem orderviewModelAccompanimentGetValue = null;
-        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> orderviewModelAccompaniment = null;
+        java.lang.String totalAndroidStringTotalViewModelTotal = null;
+        java.lang.String viewModelEntreeFormattedPrice = null;
+        java.lang.String taxAndroidStringTaxViewModelTax = null;
+        java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
+        java.lang.String viewModelTaxGetValue = null;
+        com.example.lunchtray.model.MenuItem viewModelEntreeGetValue = null;
+        com.example.lunchtray.model.MenuItem viewModelSideGetValue = null;
+        java.lang.String viewModelSubtotalGetValue = null;
+        com.example.lunchtray.model.MenuItem viewModelAccompanimentGetValue = null;
+        java.lang.String viewModelSideFormattedPrice = null;
+        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelEntree = null;
+        java.lang.String viewModelAccompanimentName = null;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelTotal = null;
+        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelSide = null;
+        java.lang.String viewModelEntreeName = null;
+        java.lang.String viewModelSideName = null;
+        java.lang.String viewModelTotalGetValue = null;
+        com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
+        androidx.lifecycle.LiveData<java.lang.String> viewModelTax = null;
+        java.lang.String viewModelAccompanimentFormattedPrice = null;
 
         if ((dirtyFlags & 0x1bfL) != 0) {
 
 
             if ((dirtyFlags & 0x181L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.entree
-                        orderviewModelEntree = orderviewModel.getEntree();
+                    if (viewModel != null) {
+                        // read viewModel.accompaniment
+                        viewModelAccompaniment = viewModel.getAccompaniment();
                     }
-                    updateLiveDataRegistration(0, orderviewModelEntree);
+                    updateLiveDataRegistration(0, viewModelAccompaniment);
 
 
-                    if (orderviewModelEntree != null) {
-                        // read OrderviewModel.entree.getValue()
-                        orderviewModelEntreeGetValue = orderviewModelEntree.getValue();
+                    if (viewModelAccompaniment != null) {
+                        // read viewModel.accompaniment.getValue()
+                        viewModelAccompanimentGetValue = viewModelAccompaniment.getValue();
                     }
 
 
-                    if (orderviewModelEntreeGetValue != null) {
-                        // read OrderviewModel.entree.getValue().name
-                        orderviewModelEntreeName = orderviewModelEntreeGetValue.getName();
-                        // read OrderviewModel.entree.getValue().formattedPrice
-                        orderviewModelEntreeFormattedPrice = orderviewModelEntreeGetValue.getFormattedPrice();
+                    if (viewModelAccompanimentGetValue != null) {
+                        // read viewModel.accompaniment.getValue().name
+                        viewModelAccompanimentName = viewModelAccompanimentGetValue.getName();
+                        // read viewModel.accompaniment.getValue().formattedPrice
+                        viewModelAccompanimentFormattedPrice = viewModelAccompanimentGetValue.getFormattedPrice();
                     }
             }
             if ((dirtyFlags & 0x182L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.subtotal
-                        orderviewModelSubtotal = orderviewModel.getSubtotal();
+                    if (viewModel != null) {
+                        // read viewModel.subtotal
+                        viewModelSubtotal = viewModel.getSubtotal();
                     }
-                    updateLiveDataRegistration(1, orderviewModelSubtotal);
+                    updateLiveDataRegistration(1, viewModelSubtotal);
 
 
-                    if (orderviewModelSubtotal != null) {
-                        // read OrderviewModel.subtotal.getValue()
-                        orderviewModelSubtotalGetValue = orderviewModelSubtotal.getValue();
+                    if (viewModelSubtotal != null) {
+                        // read viewModel.subtotal.getValue()
+                        viewModelSubtotalGetValue = viewModelSubtotal.getValue();
                     }
 
 
                     // read @android:string/subtotal
-                    subtotalAndroidStringSubtotalOrderviewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, orderviewModelSubtotalGetValue);
+                    subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
             }
             if ((dirtyFlags & 0x184L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.tax
-                        orderviewModelTax = orderviewModel.getTax();
+                    if (viewModel != null) {
+                        // read viewModel.entree
+                        viewModelEntree = viewModel.getEntree();
                     }
-                    updateLiveDataRegistration(2, orderviewModelTax);
+                    updateLiveDataRegistration(2, viewModelEntree);
 
 
-                    if (orderviewModelTax != null) {
-                        // read OrderviewModel.tax.getValue()
-                        orderviewModelTaxGetValue = orderviewModelTax.getValue();
+                    if (viewModelEntree != null) {
+                        // read viewModel.entree.getValue()
+                        viewModelEntreeGetValue = viewModelEntree.getValue();
                     }
 
 
-                    // read @android:string/tax
-                    taxAndroidStringTaxOrderviewModelTax = tax.getResources().getString(R.string.tax, orderviewModelTaxGetValue);
+                    if (viewModelEntreeGetValue != null) {
+                        // read viewModel.entree.getValue().formattedPrice
+                        viewModelEntreeFormattedPrice = viewModelEntreeGetValue.getFormattedPrice();
+                        // read viewModel.entree.getValue().name
+                        viewModelEntreeName = viewModelEntreeGetValue.getName();
+                    }
             }
             if ((dirtyFlags & 0x188L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.total
-                        orderviewModelTotal = orderviewModel.getTotal();
+                    if (viewModel != null) {
+                        // read viewModel.total
+                        viewModelTotal = viewModel.getTotal();
                     }
-                    updateLiveDataRegistration(3, orderviewModelTotal);
+                    updateLiveDataRegistration(3, viewModelTotal);
 
 
-                    if (orderviewModelTotal != null) {
-                        // read OrderviewModel.total.getValue()
-                        orderviewModelTotalGetValue = orderviewModelTotal.getValue();
+                    if (viewModelTotal != null) {
+                        // read viewModel.total.getValue()
+                        viewModelTotalGetValue = viewModelTotal.getValue();
                     }
 
 
                     // read @android:string/total
-                    totalAndroidStringTotalOrderviewModelTotal = total.getResources().getString(R.string.total, orderviewModelTotalGetValue);
+                    totalAndroidStringTotalViewModelTotal = total.getResources().getString(R.string.total, viewModelTotalGetValue);
             }
             if ((dirtyFlags & 0x190L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.side
-                        orderviewModelSide = orderviewModel.getSide();
+                    if (viewModel != null) {
+                        // read viewModel.side
+                        viewModelSide = viewModel.getSide();
                     }
-                    updateLiveDataRegistration(4, orderviewModelSide);
+                    updateLiveDataRegistration(4, viewModelSide);
 
 
-                    if (orderviewModelSide != null) {
-                        // read OrderviewModel.side.getValue()
-                        orderviewModelSideGetValue = orderviewModelSide.getValue();
+                    if (viewModelSide != null) {
+                        // read viewModel.side.getValue()
+                        viewModelSideGetValue = viewModelSide.getValue();
                     }
 
 
-                    if (orderviewModelSideGetValue != null) {
-                        // read OrderviewModel.side.getValue().name
-                        orderviewModelSideName = orderviewModelSideGetValue.getName();
-                        // read OrderviewModel.side.getValue().formattedPrice
-                        orderviewModelSideFormattedPrice = orderviewModelSideGetValue.getFormattedPrice();
+                    if (viewModelSideGetValue != null) {
+                        // read viewModel.side.getValue().formattedPrice
+                        viewModelSideFormattedPrice = viewModelSideGetValue.getFormattedPrice();
+                        // read viewModel.side.getValue().name
+                        viewModelSideName = viewModelSideGetValue.getName();
                     }
             }
             if ((dirtyFlags & 0x1a0L) != 0) {
 
-                    if (orderviewModel != null) {
-                        // read OrderviewModel.accompaniment
-                        orderviewModelAccompaniment = orderviewModel.getAccompaniment();
+                    if (viewModel != null) {
+                        // read viewModel.tax
+                        viewModelTax = viewModel.getTax();
                     }
-                    updateLiveDataRegistration(5, orderviewModelAccompaniment);
+                    updateLiveDataRegistration(5, viewModelTax);
 
 
-                    if (orderviewModelAccompaniment != null) {
-                        // read OrderviewModel.accompaniment.getValue()
-                        orderviewModelAccompanimentGetValue = orderviewModelAccompaniment.getValue();
+                    if (viewModelTax != null) {
+                        // read viewModel.tax.getValue()
+                        viewModelTaxGetValue = viewModelTax.getValue();
                     }
 
 
-                    if (orderviewModelAccompanimentGetValue != null) {
-                        // read OrderviewModel.accompaniment.getValue().formattedPrice
-                        orderviewModelAccompanimentFormattedPrice = orderviewModelAccompanimentGetValue.getFormattedPrice();
-                        // read OrderviewModel.accompaniment.getValue().name
-                        orderviewModelAccompanimentName = orderviewModelAccompanimentGetValue.getName();
-                    }
+                    // read @android:string/tax
+                    taxAndroidStringTaxViewModelTax = tax.getResources().getString(R.string.tax, viewModelTaxGetValue);
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x1a0L) != 0) {
+        if ((dirtyFlags & 0x181L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.accompanimentPrice, orderviewModelAccompanimentFormattedPrice);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.accompanimentSelection, orderviewModelAccompanimentName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.accompanimentPrice, viewModelAccompanimentFormattedPrice);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.accompanimentSelection, viewModelAccompanimentName);
         }
         if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
@@ -359,32 +359,32 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
             this.cancelButton.setOnClickListener(mCallback7);
             this.submitButton.setOnClickListener(mCallback6);
         }
-        if ((dirtyFlags & 0x181L) != 0) {
+        if ((dirtyFlags & 0x184L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entreePrice, orderviewModelEntreeFormattedPrice);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entreeSelection, orderviewModelEntreeName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entreePrice, viewModelEntreeFormattedPrice);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.entreeSelection, viewModelEntreeName);
         }
         if ((dirtyFlags & 0x190L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sidePrice, orderviewModelSideFormattedPrice);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sideSelection, orderviewModelSideName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sidePrice, viewModelSideFormattedPrice);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sideSelection, viewModelSideName);
         }
         if ((dirtyFlags & 0x182L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalOrderviewModelSubtotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
         }
-        if ((dirtyFlags & 0x184L) != 0) {
+        if ((dirtyFlags & 0x1a0L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tax, taxAndroidStringTaxOrderviewModelTax);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tax, taxAndroidStringTaxViewModelTax);
         }
         if ((dirtyFlags & 0x188L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.total, totalAndroidStringTotalOrderviewModelTotal);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.total, totalAndroidStringTotalViewModelTotal);
         }
     }
     // Listener Stub Implementations
@@ -430,14 +430,14 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): OrderviewModel.entree
-        flag 1 (0x2L): OrderviewModel.subtotal
-        flag 2 (0x3L): OrderviewModel.tax
-        flag 3 (0x4L): OrderviewModel.total
-        flag 4 (0x5L): OrderviewModel.side
-        flag 5 (0x6L): OrderviewModel.accompaniment
+        flag 0 (0x1L): viewModel.accompaniment
+        flag 1 (0x2L): viewModel.subtotal
+        flag 2 (0x3L): viewModel.entree
+        flag 3 (0x4L): viewModel.total
+        flag 4 (0x5L): viewModel.side
+        flag 5 (0x6L): viewModel.tax
         flag 6 (0x7L): CheckoutFragment
-        flag 7 (0x8L): OrderviewModel
+        flag 7 (0x8L): viewModel
         flag 8 (0x9L): null
     flag mapping end*/
     //end

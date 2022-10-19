@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.lunchtray.R
+import com.example.lunchtray.databinding.FragmentAccompanimentMenuBinding
 import com.example.lunchtray.databinding.FragmentCheckoutBinding
 import com.example.lunchtray.model.OrderViewModel
 import com.google.android.material.snackbar.Snackbar
@@ -60,31 +61,22 @@ class CheckoutFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
+            viewModel = sharedViewModel
             checkoutFragment = this@CheckoutFragment
         }
     }
 
-    /**
-     * Cancel the order and start over.
-     */
-    fun cancelOrder() {
-        sharedViewModel.resetOrder()
-        findNavController().navigate(R.id.action_checkoutFragment_to_startOrderFragment)
-    }
-
-    /**
-     * Submit order and navigate to home screen.
-     */
     fun submitOrder() {
         Snackbar.make(binding.root, R.string.submit_order, Snackbar.LENGTH_SHORT).show()
         sharedViewModel.resetOrder()
         findNavController().navigate(R.id.action_checkoutFragment_to_startOrderFragment)
     }
 
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_checkoutFragment_to_startOrderFragment)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
