@@ -42,22 +42,12 @@ public final class CheckoutFragment extends androidx.fragment.app.Fragment {
     android.os.Bundle savedInstanceState) {
     }
     
-    /**
-     * Cancel the order and start over.
-     */
-    public final void cancelOrder() {
-    }
-    
-    /**
-     * Submit order and navigate to home screen.
-     */
     public final void submitOrder() {
     }
     
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
+    public final void cancelOrder() {
+    }
+    
     @java.lang.Override()
     public void onDestroyView() {
     }
